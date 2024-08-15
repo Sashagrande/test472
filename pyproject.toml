@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "points-streaming"
+version = "0.1.0"
+description = ""
+authors = ["Aleksandr Dadeko"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+asyncpg = "^0.29.0"
+click = "^8.1.7"
+aiohttp = "^3.10.3"
+envparse = "^0.2.0"
+loguru = "^0.7.2"
+orjson = "^3.10.7"
+async-lru = "^2.0.4"
+black = "^24.8.0"
+isort = "^5.13.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+line_length = 100
+profile = "black"
+quiet = true
+src_paths = ["."]
+include_trailing_comma = true
+use_parentheses = true
+multi_line_output = 3
+ensure_newline_before_comments = true
+
+[tool.black]
+line-length = 100
